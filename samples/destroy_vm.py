@@ -36,10 +36,10 @@ def setup_args():
                              'to reboot.')
     parser.add_argument('-n', '--name',
                         help='DNS Name of the VirtualMachine you want to '
-                             'reboot.')
+                             'destroy')
     parser.add_argument('-i', '--ip',
                         help='IP Address of the VirtualMachine you want to '
-                             'reboot')
+                             'destroy')
 
     my_args = parser.parse_args()
 
@@ -76,9 +76,9 @@ if VM is None:
 print("Found: {0}".format(VM.name))
 print("The current powerState is: {0}".format(VM.runtime.powerState))
 print("Attempting to power off {0}".format(VM.name))
-TASK = VM.PowerOffVM_Task()
-tasks.wait_for_tasks(SI, [TASK])
-print("{0}".format(TASK.info.state))
+# TASK = VM.PowerOffVM_Task()
+# tasks.wait_for_tasks(SI, [TASK])
+# print("{0}".format(TASK.info.state))
 print("Destroying VM from vSphere.")
 TASK = VM.Destroy_Task()
 tasks.wait_for_tasks(SI, [TASK])
