@@ -54,7 +54,7 @@ def main():
     args = cli.get_args()
 
     try:
-        service_instance = connect.SmartConnect(host=args.host,
+        service_instance = connect.SmartConnectNoSSL(host=args.host,
                                                 user=args.user,
                                                 pwd=args.password,
                                                 port=int(args.port))

@@ -111,7 +111,7 @@ print "suds session to pyvmomi "
 import pyVim.connect as connect
 
 # Unfortunately, you can't connect without a login in pyVmomi
-si = connect.SmartConnect(host=args.host,
+si = connect.SmartConnectNoSSL(host=args.host,
                           user=args.user,
                           pwd=password,
                           port=int(args.port))

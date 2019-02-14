@@ -41,7 +41,7 @@ def setup_args():
 ARGS = setup_args()
 SI = None
 try:
-    SI = connect.SmartConnect(host=ARGS.host,
+    SI = connect.SmartConnectNoSSL(host=ARGS.host,
                               user=ARGS.user,
                               pwd=ARGS.password,
                               port=ARGS.port)

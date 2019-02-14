@@ -62,7 +62,7 @@ def get_si(**kwargs):
     passwd = kwargs.get("passwd")
     host = kwargs.get("host")
     port = kwargs.get("port")
-    return connect.SmartConnect(host=host,
+    return connect.SmartConnectNoSSL(host=host,
                                 user=user,
                                 pwd=passwd,
                                 port=int(port))

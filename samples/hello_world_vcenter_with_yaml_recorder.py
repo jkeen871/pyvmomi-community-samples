@@ -79,7 +79,7 @@ def main():
         # use the vcr instance to setup an instance of service_instance
         with my_vcr.use_cassette('hello_world_vcenter.yaml',
                                  record_mode='all'):
-            service_instance = connect.SmartConnect(host=args.host,
+            service_instance = connect.SmartConnectNoSSL(host=args.host,
                                                     user=args.user,
                                                     pwd=args.password,
                                                     port=int(args.port))

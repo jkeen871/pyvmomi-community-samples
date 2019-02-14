@@ -75,7 +75,7 @@ def get_args():
 args = get_args()
 
 # form a connection...
-si = connect.SmartConnect(host=args.host, user=args.user, pwd=args.password,
+si = connect.SmartConnectNoSSL(host=args.host, user=args.user, pwd=args.password,
                           port=args.port)
 
 # doing this means you don't need to remember to disconnect your script/objects

@@ -66,7 +66,7 @@ else:
         prompt='Enter password for host %s and user %s: ' %
                (args.host, args.user))
 
-si = connect.SmartConnect(host=args.host,
+si = connect.SmartConnectNoSSL(host=args.host,
                           user=args.user,
                           pwd=password,
                           port=int(args.port))

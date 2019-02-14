@@ -154,7 +154,7 @@ def main():
     else:
         marvel_private_key = raw_input('Marvel private key: ').strip()
 
-    service_instance = connect.SmartConnect(host=args.host,
+    service_instance = connect.SmartConnectNoSSL(host=args.host,
                                             user=args.user,
                                             pwd=args.password,
                                             port=int(args.port))
